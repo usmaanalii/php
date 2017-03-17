@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>onerror</title>
+    </head>
+    <body>
+        <script>
+            onerror = errorHandler;
+            document.writ("Welcome to the website") // deliberate error
+
+            function errorHandler (message, url, line) {
+                out = "Sorry, an error was enocuntered.\n\n";
+                out += "Error: " + message + '\n';
+                out += "URL: " + url + '\n';
+                out += "Line: " + line + '\n';
+                out += "Click OK to continue.\n\n"
+
+                alert(out);
+
+                return true;
+            }
+        </script>
+    </body>
+</html>

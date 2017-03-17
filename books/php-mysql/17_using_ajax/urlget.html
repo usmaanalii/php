@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>AJAX Example</title>
+    </head>
+    <body style="text-align:center">
+        <h1>Loading a web page into a DIV</h1>
+        <script>
+            nocache = "&nocache=" + Math.random() * 1000000;
+            request = new ajaxRequest();
+            request.open("GET", "urlget.php?url=amazon.com/gp/aw" + nocache, true);
+
+            request.onreadystatechange = function () {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                        if (this.responseText != null) {
+                            document.getElementById('info').innerHTML = this.responseText;
+                        }
+                        else {
+                            alert("Ajax error: No data recieved");
+                        }
+                    }
+                    else {
+                        alert(" Ajax error: " + this.statustext);
+                    }
+                }
+            }
+
+            request.send(null);
+
+            function ajaxRequest () {
+                try { // Non IE Browser?
+                    // Yes
+                    var request = new XMLHttpRequest();
+                }
+                catch(e1) {
+                    try { // IE 6+
+                        // Yes
+                        request = new ActiveXObject("Msxm2.XMLHTTP");
+                    }
+                    catch(e2) {
+                        try { // IE 5
+                            // Yes
+                            request = new ActiveXObject("Microsoft.XMLHTTP");
+                        } catch (e3) { // No Ajax support
+                            request = false;
+                        }
+                    }
+                }
+                return request;
+            }
+        </script>
+    </body>
+</html>
