@@ -1,0 +1,67 @@
+body
+{
+    background-color: black;
+
+	font-family: Arial, sans-serif;
+}
+#main
+{
+	width: 607px;
+	margin: 80px auto;
+}
+h1
+{
+	margin: 0px;padding: 0px;
+    margin-bottom: 2%;
+
+	text-align: center;
+	letter-spacing: -2px;
+
+	color: #b4eb7e;
+
+	font-size: 4em;
+}
+
+#blogPosts
+{
+	padding: 5px;
+
+	border: 9px #615b4a solid;
+	background-color: #e9e4d9;
+}
+	.post
+	{margin: 0px 0px 5px 0px;
+		padding: 20px;
+        padding-bottom: 40px;
+
+		background: #556639;
+	}
+	.post:last-child
+	{
+		margin: 0px;
+	}
+	h2
+	{
+		margin: 0px;padding: 0px;
+
+		letter-spacing: -2px;
+
+		color: red;
+
+		font-size: 4em;
+
+        font-weight: bold;
+	}
+		.post p
+		{
+			margin: 10px 0px 14px 0px;
+		}
+		.post span
+		{
+			display: block;
+
+			padding: 4px;
+
+			color: #70864d;
+			background-color: #344120;
+		}
