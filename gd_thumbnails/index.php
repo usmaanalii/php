@@ -6,9 +6,8 @@
     </head>
     <body>
         <?php
-        require 'image_names.php';
+        require 'image_paths.php';
         $image_src = get_image_paths('./thumbnails');
-        // print_r($image_src);
         ?>
         
         <?php foreach ($image_src as $key => $path): ?>

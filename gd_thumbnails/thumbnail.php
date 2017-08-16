@@ -1,14 +1,17 @@
 <?php
 /**
  * Function takes in an image and creates a thumbnail
- * @param  string $source         - location of file e.g './image_name.jpg'
+ * @param  string $source         - location of file e.g './image_name.jpg',
+ *                                  this is also used to build the destination
+ *                                  file name located in the './thumbnails'
+ *                                  directory
  * @param  int $desired_width     - integer representing the height of the
  *                                  new image
  * @param  int $desired_height    - integer representing the width of the
  *                                  new image
  * @return string                 - Confirmation message, pointing to where
  *                                  the image is located e.g
- *                                  'Thumbnail located at /thumnail/image_name.jpg'
+ *                                  'Thumbnail located at /thumnail/../image_name.jpg'
  */
 function make_thumb($source, $desired_width, $desired_height) {
 
