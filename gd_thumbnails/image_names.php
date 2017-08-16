@@ -28,5 +28,3 @@ function get_image_paths($directory) {
 
     return $image_paths;
 }
-
-// print_r(get_image_paths('./images'));
