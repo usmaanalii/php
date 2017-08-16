@@ -22,8 +22,6 @@ function get_dir_contents($directory, &$results = array()){
     return $results;
 }
 
-print_r(get_dir_contents('./images/'));
-
 /**
  * Takes the array returned from the get_dir_contents and
  * filters out the images
@@ -46,5 +44,3 @@ function get_image_paths($directory) {
 
     return $image_paths;
 }
-
-print_r(get_image_paths('./images/'));
